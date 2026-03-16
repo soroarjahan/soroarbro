@@ -205,11 +205,12 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
+        const imageSource = profileImage.src && profileImage.src !== '' ? profileImage.src : null;
         const profileData = {
             userName: userName,
             userEmail: userEmail,
             userBio: userBio,
-            profileImage: profileImage.src || null,
+            profileImage: imageSource,
             lastUpdated: new Date().toISOString()
         };
         
@@ -218,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showSuccess('Profile saved successfully!');
         } catch (e) {
             // Handle localStorage quota exceeded
-            if (e.name === 'QuotaExceededError' || e.code === 22) {
+            if (e.name === 'QuotaExceededError') {
                 showError('Storage limit exceeded. Try using a smaller image.');
             } else {
                 showError('Error saving profile. Please try again.');
