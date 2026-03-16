@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Soroar Jahan – Full-Stack Developer & UI/UX Designer portfolio website" />
+  <title>Soroar Jahan | Full-Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-dot"></div>
+      <div class="preloader-dot"></div>
+      <div class="preloader-dot"></div>
+    </div>
+  </div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>SJ<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#schedule" class="nav-link">Schedule</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="nav-cta" onclick="scrollToSection('#contact')">Hire Me</button>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <!-- Animated Background -->
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particles-container" id="particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-fade-up">
+        <span class="badge-dot"></span>
+        Available for work
+      </div>
+
+      <h1 class="hero-title reveal-fade-up">
+        Hi, I'm <span class="highlight">Soroar Jahan</span>
+      </h1>
+
+      <div class="hero-subtitle reveal-fade-up">
+        <span class="static-text">I build </span>
+        <span class="dynamic-text" id="dynamic-text"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+
+      <p class="hero-description reveal-fade-up">
+        Full-stack developer &amp; UI/UX designer passionate about crafting beautiful, 
+        high-performance web experiences that make a real impact.
+      </p>
+
+      <div class="hero-actions reveal-fade-up">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i>
+          View My Work
+        </a>
+        <a href="#schedule" class="btn btn-secondary">
+          <i class="fas fa-calendar-check"></i>
+          Book a Call
+        </a>
+      </div>
+
+      <div class="hero-stats reveal-fade-up">
+        <div class="stat-item">
+          <span class="stat-number" data-target="50">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Projects Done</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="30">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal-fade-up">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Passionate Developer &<br />Creative Problem Solver</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal-fade-left">
+          <div class="about-image-container">
+            <div class="about-image-placeholder">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="about-image-badge">
+              <i class="fas fa-code"></i>
+              <span>5+ years coding</span>
+            </div>
+          </div>
+          <div class="about-shape-1"></div>
+          <div class="about-shape-2"></div>
+        </div>
+
+        <div class="about-content reveal-fade-right">
+          <h3 class="about-subtitle">Building Digital Experiences That Matter</h3>
+          <p class="about-text">
+            I'm a full-stack developer with a passion for creating elegant, user-centric web applications. 
+            With expertise spanning front-end design to back-end architecture, I bridge the gap between 
+            beautiful design and powerful functionality.
+          </p>
+          <p class="about-text">
+            When I'm not coding, I'm exploring new technologies, contributing to open-source projects, 
+            and sharing knowledge with the developer community.
+          </p>
+
+          <div class="about-info-grid">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Available Globally (Remote)</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span>contact@soroarjahan.dev</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>B.Sc. Computer Science</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-language"></i>
+              <span>English, Bengali</span>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Get In Touch
+            </a>
+            <a href="#" class="btn btn-outline" download>
+              <i class="fas fa-download"></i>
+              Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal-fade-up">
+        <span class="section-tag">My Skills</span>
+        <h2 class="section-title">Technologies &<br />Tools I Use</h2>
+      </div>
+
+      <div class="skills-categories reveal-fade-up">
+        <button class="skill-cat-btn active" data-cat="all">All</button>
+        <button class="skill-cat-btn" data-cat="frontend">Frontend</button>
+        <button class="skill-cat-btn" data-cat="backend">Backend</button>
+        <button class="skill-cat-btn" data-cat="tools">Tools</button>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Frontend -->
+        <div class="skill-card reveal-fade-up" data-category="frontend">
+          <div class="skill-icon" style="--icon-color: #e34f26;">
+            <i class="fab fa-html5"></i>
+          </div>
+          <span class="skill-name">HTML5</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="95">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">95%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-fade-up" data-category="frontend">
+          <div class="skill-icon" style="--icon-color: #1572b6;">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <span class="skill-name">CSS3</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="90">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">90%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-fade-up" data-category="frontend">
+          <div class="skill-icon" style="--icon-color: #f7df1e;">
+            <i class="fab fa-js-square"></i>
+          </div>
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="88">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">88%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-fade-up" data-category="frontend">
+          <div class="skill-icon" style="--icon-color: #61dafb;">
+            <i class="fab fa-react"></i>
+          </div>
+          <span class="skill-name">React</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="85">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">85%</span>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card reveal-fade-up" data-category="backend">
+          <div class="skill-icon" style="--icon-color: #339933;">
+            <i class="fab fa-node-js"></i>
+          </div>
+          <span class="skill-name">Node.js</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="82">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">82%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-fade-up" data-category="backend">
+          <div class="skill-icon" style="--icon-color: #3776ab;">
+            <i class="fab fa-python"></i>
+          </div>
+          <span class="skill-name">Python</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="80">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">80%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-fade-up" data-category="backend">
+          <div class="skill-icon" style="--icon-color: #4db33d;">
+            <i class="fas fa-database"></i>
+          </div>
+          <span class="skill-name">MongoDB</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="78">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">78%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-fade-up" data-category="backend">
+          <div class="skill-icon" style="--icon-color: #336791;">
+            <i class="fas fa-server"></i>
+          </div>
+          <span class="skill-name">PostgreSQL</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="75">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">75%</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card reveal-fade-up" data-category="tools">
+          <div class="skill-icon" style="--icon-color: #f05032;">
+            <i class="fab fa-git-alt"></i>
+          </div>
+          <span class="skill-name">Git</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="90">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">90%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-fade-up" data-category="tools">
+          <div class="skill-icon" style="--icon-color: #2496ed;">
+            <i class="fab fa-docker"></i>
+          </div>
+          <span class="skill-name">Docker</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="72">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">72%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-fade-up" data-category="frontend">
+          <div class="skill-icon" style="--icon-color: #38bdf8;">
+            <i class="fas fa-wind"></i>
+          </div>
+          <span class="skill-name">Tailwind CSS</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="88">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">88%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-fade-up" data-category="tools">
+          <div class="skill-icon" style="--icon-color: #ff9900;">
+            <i class="fab fa-aws"></i>
+          </div>
+          <span class="skill-name">AWS</span>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar" data-level="70">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-level">70%</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal-fade-up">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured<br />Projects</h2>
+      </div>
+
+      <div class="projects-filter reveal-fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="design">UI/UX</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal-fade-up" data-type="web">
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--proj-color: #6366f1;">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn" aria-label="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link-btn" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">MongoDB</span>
+            </div>
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <p class="project-desc">
+              A full-stack e-commerce solution with real-time inventory, payment integration, and admin dashboard.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card reveal-fade-up" data-type="web">
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--proj-color: #06b6d4;">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn" aria-label="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link-btn" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">PostgreSQL</span>
+            </div>
+            <h3 class="project-title">Analytics Dashboard</h3>
+            <p class="project-desc">
+              Real-time data analytics dashboard with interactive charts and customizable KPI widgets.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card reveal-fade-up" data-type="mobile">
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--proj-color: #f59e0b;">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn" aria-label="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link-btn" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">React Native</span>
+              <span class="project-tag">Firebase</span>
+            </div>
+            <h3 class="project-title">Task Manager App</h3>
+            <p class="project-desc">
+              Cross-platform mobile app for task and project management with team collaboration features.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card reveal-fade-up" data-type="design">
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--proj-color: #ec4899;">
+              <i class="fas fa-palette"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn" aria-label="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link-btn" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Figma</span>
+              <span class="project-tag">UI/UX</span>
+            </div>
+            <h3 class="project-title">Design System</h3>
+            <p class="project-desc">
+              Comprehensive design system with reusable components, design tokens, and documentation.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card reveal-fade-up" data-type="web">
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--proj-color: #10b981;">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn" aria-label="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link-btn" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">Socket.io</span>
+              <span class="project-tag">Redis</span>
+            </div>
+            <h3 class="project-title">Real-Time Chat App</h3>
+            <p class="project-desc">
+              Scalable real-time messaging platform with rooms, file sharing, and end-to-end encryption.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card reveal-fade-up" data-type="web">
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--proj-color: #8b5cf6;">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn" aria-label="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link-btn" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">TensorFlow</span>
+              <span class="project-tag">React</span>
+            </div>
+            <h3 class="project-title">AI Content Generator</h3>
+            <p class="project-desc">
+              AI-powered content generation tool with custom model fine-tuning and API access.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects-cta reveal-fade-up">
+        <a href="https://github.com/soroarjahan" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <i class="fab fa-github"></i>
+          View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header reveal-fade-up">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">What Clients<br />Say About Me</h2>
+      </div>
+
+      <div class="testimonials-track-wrapper reveal-fade-up">
+        <div class="testimonials-track" id="testimonials-track">
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "Soroar delivered an exceptional e-commerce platform that exceeded our expectations. 
+              His attention to detail and commitment to performance made a huge difference."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="--av-color: #6366f1;">JD</div>
+              <div class="testimonial-info">
+                <strong>John Doe</strong>
+                <span>CEO, TechStartup</span>
+              </div>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "Working with Soroar was a great experience. He understood our vision perfectly and 
+              transformed it into a beautiful, functional web application in record time."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="--av-color: #06b6d4;">SM</div>
+              <div class="testimonial-info">
+                <strong>Sarah Mitchell</strong>
+                <span>Product Manager, DesignCo</span>
+              </div>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "Incredibly talented developer. The real-time dashboard he built for us has 
+              transformed how we monitor our business metrics. Highly recommended!"
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="--av-color: #f59e0b;">AK</div>
+              <div class="testimonial-info">
+                <strong>Alex Kumar</strong>
+                <span>CTO, DataInsights</span>
+              </div>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "The mobile app Soroar created for our team has boosted productivity by 40%. 
+              His technical skills combined with great communication made the project seamless."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="--av-color: #10b981;">LP</div>
+              <div class="testimonial-info">
+                <strong>Lisa Park</strong>
+                <span>Operations Director, FlowCorp</span>
+              </div>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonials-controls">
+          <button class="testi-btn" id="testi-prev" aria-label="Previous testimonial">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testi-dots" id="testi-dots"></div>
+          <button class="testi-btn" id="testi-next" aria-label="Next testimonial">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SCHEDULE ===================== -->
+  <section id="schedule">
+    <div class="container">
+      <div class="section-header reveal-fade-up">
+        <span class="section-tag">Book a Meeting</span>
+        <h2 class="section-title">Let's Connect &<br />Collaborate</h2>
+        <p class="section-desc">
+          Pick a time that works for you. I'm available for discovery calls, project discussions, 
+          and consultations.
+        </p>
+      </div>
+
+      <div class="schedule-wrapper reveal-fade-up">
+        <div class="schedule-info">
+          <div class="schedule-feature">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>30-min Discovery Call</strong>
+              <span>Let's explore how I can help with your project</span>
+            </div>
+          </div>
+          <div class="schedule-feature">
+            <i class="fas fa-video"></i>
+            <div>
+              <strong>Video / Phone</strong>
+              <span>Google Meet, Zoom, or phone call</span>
+            </div>
+          </div>
+          <div class="schedule-feature">
+            <i class="fas fa-globe"></i>
+            <div>
+              <strong>All Timezones</strong>
+              <span>Flexible scheduling across all time zones</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cal.com Embed -->
+        <div class="cal-embed-wrapper">
+          <div id="cal-embed" class="cal-embed">
+            <!-- Cal.com inline embed -->
+            <div id="cal-inline-container">
+              <div class="cal-placeholder">
+                <i class="fas fa-calendar-alt"></i>
+                <p>Loading calendar...</p>
+                <a href="https://cal.com/soroarjahan" target="_blank" rel="noopener noreferrer" class="btn btn-primary cal-fallback-btn">
+                  <i class="fas fa-calendar-check"></i>
+                  Open Scheduling Page
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal-fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Have a Project<br />in Mind?</h2>
+        <p class="section-desc">
+          I'm currently available for freelance projects and full-time opportunities. 
+          Let's build something amazing together.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info reveal-fade-left">
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-card-content">
+              <h4>Email</h4>
+              <a href="mailto:contact@soroarjahan.dev">contact@soroarjahan.dev</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="contact-card-content">
+              <h4>LinkedIn</h4>
+              <a href="https://linkedin.com/in/soroarjahan" target="_blank" rel="noopener noreferrer">linkedin.com/in/soroarjahan</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-card-content">
+              <h4>GitHub</h4>
+              <a href="https://github.com/soroarjahan" target="_blank" rel="noopener noreferrer">github.com/soroarjahan</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="contact-card-content">
+              <h4>Schedule</h4>
+              <a href="#schedule">Book a meeting</a>
+            </div>
+          </div>
+
+          <div class="contact-availability">
+            <div class="availability-dot"></div>
+            <p>Currently available for new projects</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper reveal-fade-right">
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fas fa-user input-icon"></i>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="John Doe"
+                    autocomplete="name"
+                    required 
+                  />
+                </div>
+                <span class="field-error" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fas fa-envelope input-icon"></i>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="john@example.com"
+                    autocomplete="email"
+                    required 
+                  />
+                </div>
+                <span class="field-error" id="email-error"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-tag input-icon"></i>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  name="subject" 
+                  placeholder="Project inquiry / Collaboration"
+                  required 
+                />
+              </div>
+              <span class="field-error" id="subject-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Budget Range</label>
+              <div class="input-wrapper select-wrapper">
+                <i class="fas fa-dollar-sign input-icon"></i>
+                <select id="budget" name="budget">
+                  <option value="">Select budget range...</option>
+                  <option value="< $1,000">Less than $1,000</option>
+                  <option value="$1,000 - $5,000">$1,000 – $5,000</option>
+                  <option value="$5,000 - $15,000">$5,000 – $15,000</option>
+                  <option value="$15,000+">$15,000+</option>
+                  <option value="Open to discuss">Open to discuss</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span class="required">*</span></label>
+              <div class="textarea-wrapper">
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="5" 
+                  placeholder="Tell me about your project, goals, and timeline..."
+                  required
+                ></textarea>
+                <div class="char-counter"><span id="char-count">0</span> / 1000</div>
+              </div>
+              <span class="field-error" id="message-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+              <span class="btn-text">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </span>
+              <span class="btn-loading" hidden>
+                <i class="fas fa-spinner fa-spin"></i>
+                Sending...
+              </span>
+            </button>
+          </form>
+
+          <!-- Success Message -->
+          <div class="form-success" id="form-success" hidden>
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+            <button class="btn btn-outline" id="send-another-btn">Send Another</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo footer-logo">
+            <span class="logo-bracket">&lt;</span>SJ<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p class="footer-tagline">Building digital experiences<br />that make a difference.</p>
+          <div class="footer-social">
+            <a href="https://github.com/soroarjahan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/soroarjahan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/soroarjahan" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:contact@soroarjahan.dev" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#contact">Web Development</a></li>
+            <li><a href="#contact">Mobile Apps</a></li>
+            <li><a href="#contact">UI/UX Design</a></li>
+            <li><a href="#contact">API Development</a></li>
+            <li><a href="#contact">Consulting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe to receive updates on new projects and articles.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="your@email.com" aria-label="Email for newsletter" required />
+            <button type="submit" aria-label="Subscribe">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> Soroar Jahan. All rights reserved.</p>
+        <p>Built with <i class="fas fa-heart" style="color: #ef4444;"></i> using HTML, CSS &amp; JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle toast-icon"></i>
+    <span class="toast-message"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
